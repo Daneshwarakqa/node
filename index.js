@@ -1,5 +1,3 @@
-import configfile from "./config.json" assert { type: "json" };
-
 const express = require('express');
 const xlsx = require('xlsx');
 const axios = require('axios');
