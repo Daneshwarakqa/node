@@ -1,11 +1,12 @@
 import configfile from "./config.json" assert { type: "json" };
 
-const express = require('express')
+const express = require('express');
+const xlsx = require('xlsx');
+const axios = require('axios');
+const configfile = require('./config.json');
 
 // Middlewares
 const app = express();
-const xlsx = xlsx();
-const axios = axios();
 app.use(express.json());
 
 app.get("/", (req, res, next) => {
@@ -42,4 +43,3 @@ app.get("/", (req, res, next) => {
 const port = process.env.PORT || 9008;
 app.listen(port, () => console.log(`Listening to port ${port}`));
 
-module.exports = app;
