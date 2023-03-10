@@ -1,7 +1,8 @@
-import express from "express";
 import xlsx from "xlsx";
 import axios from "axios";
 import configfile from "./config.json" assert { type: "json" };
+
+const express = require('express')
 
 // Middlewares
 const app = express();
@@ -40,3 +41,5 @@ app.get("/", (req, res, next) => {
 // connection
 const port = process.env.PORT || 9008;
 app.listen(port, () => console.log(`Listening to port ${port}`));
+
+module.exports = app;
