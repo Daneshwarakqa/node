@@ -1,4 +1,3 @@
-import axios from "axios";
 import configfile from "./config.json" assert { type: "json" };
 
 const express = require('express')
@@ -6,6 +5,7 @@ const express = require('express')
 // Middlewares
 const app = express();
 const xlsx = xlsx();
+const axios = axios();
 app.use(express.json());
 
 app.get("/", (req, res, next) => {
